@@ -96,7 +96,8 @@ struct OTPView: View {
                 otpCode = otpVM.otpNumbers.reduce("", +)
                 
                 if isErrorEnabled && clearAfterFinish && newValue.count <= 1
-                || isErrorEnabled && newValue.count > 1 && newValue[0] != newValue[1]{
+                || isErrorEnabled && newValue.count > 1 && newValue[0] != newValue[1]
+                || isErrorEnabled && newValue.count == 0 {
                     isErrorEnabled = false
                 }
                 
